@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { changeUserName } from '../store/slices/userName.slice';
-import logotypePoke from '../assets/movie/logotype-poke.gif'
-import reloadPixelMoney from '../assets/movie/reload-pixel-money.gif'
+import imagesGifs from '../assets/imagesGifs'
 
 const HomeName = () => {
 
@@ -27,13 +26,13 @@ const HomeName = () => {
             {
                 isLoading ? (
                     <div className="reload-money">
-                        <img src={reloadPixelMoney} />
+                        <img src={imagesGifs.reloadBall} />
                     </div>
 
                 ) : (
                     <div className="home-target">
                         <div className="logo-pokemon">
-                            <img width={"800px"} src={logotypePoke} />
+                            <img width={"800px"} src={imagesGifs.logoPoke} />
                         </div>
                         <h1> Hi Pokémon trainer!</h1>
                         <br />
@@ -46,6 +45,23 @@ const HomeName = () => {
                         <button className='desing-button'
                             onClick={submitName}>PokeGo!
                         </button>
+                        <div className="all-poke">
+                            <div className='charmander-poke'>
+                                <img src={imagesGifs.charmander} />
+                            </div>
+                            <div className='bulbasur-poke'>
+                                <img src={imagesGifs.bulbasur} />
+                            </div>
+                            <div className='rouse-poke'>
+                                <img src={imagesGifs.rouse} />
+                            </div>
+                            <div className='cocodryle-poke'>
+                                <img src={imagesGifs.cocodryle} />
+                            </div>
+                            <div className='pikachu-poke'>
+                                <img src={imagesGifs.pikachu} />
+                            </div>
+                        </div>
                     </div>
                 )
             }

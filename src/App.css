@@ -33,10 +33,10 @@
 
 .input-home {
   padding: 14px;
-  background-color: rgb(87, 68, 55);
+  background-color: #685549;
   border-style: ridge;
-  border-color: rgb(129, 91, 64);
-  color: greenyellow;
+  border-color: #3f3323;
+  color: yellow;
   font-size: 1.5rem;
 }
 
@@ -119,6 +119,36 @@ h2 {
 .desing-button:active {
   box-shadow: #5ebd1a 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+.all-poke img {
+  position: absolute;
+  width: 100px;
+}
+
+.charmander-poke img {
+    right: 260px;
+}
+
+.bulbasur-poke img {
+    right: 345px;
+}
+
+.cocodryle-poke img {
+    width: 110px;
+    left: 250px;
+}
+
+.rouse-poke img {
+    width: 200px;
+    top: 140px;
+    right: 130px;
+}
+
+.pikachu-poke img {
+    top: 505px;
+    width: 140px;
+    left: 340px;
 }
 
 .pokemons-list ul {
