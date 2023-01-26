@@ -44,7 +44,7 @@ const Pokedex = () => {
     const totalPages = Math.ceil(pokemons.length / pokemonsPerPage)
 
     const targetPeges = []
-    for(let i = 1; i <= totalPages; i++) {
+    for (let i = 1; i <= totalPages; i++) {
         targetPeges.push(i)
     }
 
@@ -68,16 +68,18 @@ const Pokedex = () => {
                     ))}
                 </select>
             </div>
-            <ul>
-                {
-                    pokemonsPaginated.map(pokemon => (
-                        <PokeCard
-                            url={pokemon.url ? pokemon.url : pokemon.pokemon.url}
-                            key={pokemon.url ? pokemon.url : pokemon.pokemon.url}
-                        />
-                    ))
-                }
-            </ul>
+            <div className="pokemons-list">
+                <ul>
+                    {
+                        pokemonsPaginated.map(pokemon => (
+                            <PokeCard
+                                url={pokemon.url ? pokemon.url : pokemon.pokemon.url}
+                                key={pokemon.url ? pokemon.url : pokemon.pokemon.url}
+                            />
+                        ))
+                    }
+                </ul>
+            </div>
             <div>
                 <button
                     onClick={() => setPage(page - 1)}

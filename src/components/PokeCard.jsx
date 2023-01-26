@@ -14,8 +14,9 @@ const PokeCard = ({ url }) => {
     })
 
     return (
-        <li>
-            <div onClick={() => navigate(`/pokedex/${pokemon.id}`)}>
+        <li className='col'>
+            <div className='card'
+                onClick={() => navigate(`/pokedex/${pokemon.id}`)}>
                 <b>{pokemon.name}</b>
                 <img width={"150px"} src={pokemon.sprites?.other.dream_world.front_default} alt="" />
             </div>

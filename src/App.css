@@ -1,5 +1,139 @@
 * {
-    box-sizing: border-box;
-    background-color: gray;
-    color: antiquewhite;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  text-align: center;
+}
+
+.interfax {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/5dda9f2de3177e778547286c/1574627564010-MI6CFS72ASDSU6NH1Y3P/ke17ZwdGBToddI8pDm48kFTEgwhRQcX9r3XtU0e50sUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKc2PPwcWkLXq-DNe4zpT7he0M_zRUr6912vvtObYWjAW-pUdJURR5nHbHpk7AZw8X9/forest.gif);
+  background-size: cover;
+  background-position: center;
+}
+
+.home-target {
+  width: 850px;
+  height: 400px;
+  padding: 40px;
+  background-color: darkgray;
+  color: greenyellow;
+  border-radius: 50px;
+  background-image: url(/src/assets/images/wood.jpg);
+  background-size: cover;
+  background-position: center;
+  border-color: rgb(129, 91, 64);
+  border-width: 1rem;
+  border-style: ridge;
+}
+
+.input-home {
+  padding: 14px;
+  background-color: rgb(87, 68, 55);
+  border-style: ridge;
+  border-color: rgb(129, 91, 64);
+  color: greenyellow;
+  font-size: 1.5rem;
+}
+
+.desing-button {
+  align-items: center;
+  appearance: none;
+  background-color: rgb(87, 68, 55);
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(87, 68, 55) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: greenyellow;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.reload-money img {
+  background-size: cover;
+  background-position: center;
+}
+
+.home-target h1,
+h2 {
+  cursor: default;
+}
+
+.home-target h1 {
+  color: yellow;
+  font-size: 4.5rem;
+  padding: 30px 0 15px 0;
+}
+
+.home-target h2 {
+  font-size: 2rem;
+  padding-bottom: 15px;
+}
+
+.logo-pokemon {
+  position: absolute;
+  top: -30px;
+  right: 270px;
+}
+
+.desing-button {
+  padding: 30px;
+}
+
+.desing-button:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.desing-button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(56, 45, 38) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.desing-button:active {
+  box-shadow: #5ebd1a 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.pokemons-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.col {
+  padding: 10px;
+}
+
+.card {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }

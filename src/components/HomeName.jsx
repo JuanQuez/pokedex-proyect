@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { changeUserName } from '../store/slices/userName.slice';
@@ -9,6 +9,11 @@ const HomeName = () => {
 
     const [inputName, setInputName] = useState("")
 
+    const [isLoading, setIsLoading] = useState(true)
+    useEffect(() => {
+        setTimeout(() => setIsLoading(false), 3000)
+    }, [])
+
     const navigate = useNavigate()
     const submitName = () => {
         dispatch(changeUserName(inputName))
@@ -17,12 +22,32 @@ const HomeName = () => {
 
     return (
         <div>
-            <h1>Hello, this is my house. Welcome!</h1>
-            <input type="text"
-                value={inputName}
-                onChange={e => setInputName(e.target.value)} />
-            <button onClick={submitName}>Submit</button>
-        </div>
+            {
+                isLoading ? (
+                    <div className="reload-money">
+                        <img src="src/assets/movie/reload-pixel-money.gif" alt="" />
+                    </div>
+
+                ) : (
+                    <div className="home-target">
+                        <div className="logo-pokemon">
+                            <img width={"800px"} src="/src/assets/movie/logotype-poke.gif" alt="" />
+                        </div>
+                        <h1> Hi Pokémon trainer!</h1>
+                        <br />
+                        <h2>It's time to find your Pokémon, give me your name and grab your pokeball!</h2>
+                        <br />
+                        <input className='input-home'
+                            type="text"
+                            value={inputName}
+                            onChange={e => setInputName(e.target.value)} />
+                        <button className='desing-button'
+                            onClick={submitName}>PokeGo!
+                        </button>
+                    </div>
+                )
+            }
+        </div >
     );
 };
 
